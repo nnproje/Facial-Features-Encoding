@@ -1,0 +1,15 @@
+%image to vector
+FilePath = 'C:\Users\delta\Desktop\crop_part1_grey\';
+Files = dir(FilePath);
+numOfImgs = length(Files) - 2;
+sizeOfImg = 200*200;
+for k=3:length(Files)
+   ImgName = strcat(FilePath,Files(k).name);
+   Img = imread(ImgName);
+   ImgVect = Img';
+   ImgVect = ImgVect(:);
+   AllImgs(:,k-2) = ImgVect;
+end
+dlmwrite('grey_crop_part1.txt',AllImgs)
+%outputs a text file holds (40000,6864) elements sperated with ,
+%every column is an image
