@@ -1,0 +1,42 @@
+% Read the input image
+I = imread('C:\Users\delta\Desktop\crop_part1_grey\1_0_0_20161219191041403.jpg.chip.jpg');
+
+%To detect Face
+FaceDetect = vision.CascadeObjectDetector;
+BB=step(FaceDetect,I);
+BB1 = insertObjectAnnotation(I,'rectangle',BB,'Face');
+hn1 = imhist(BB)./numel(BB);
+h1=subplot(1,2,1);
+imshow(I);imshow(BB1); hold on
+title('Facial Feature Detection');
+
+%Crop
+for i = 1:size(BB,1)
+ J= imcrop(I,BB(i,:));
+   figure(3),subplot(2,2,i);imshow(J);
+end
+figure(4), imshow(J);
+
+
+%To detect Mouth
+MouthDetect = vision.CascadeObjectDetector('Mouth','MergeThreshold',180);
+BB=step(MouthDetect,I);
+ hold on
+for i = 1:size(BB,1)
+ rectangle('Position',BB(i,:),'LineWidth',2,'LineStyle','-','EdgeColor','r');
+end
+
+%To detect Nose
+NoseDetect = vision.CascadeObjectDetector('Nose','MergeThreshold',12);
+BB=step(NoseDetect,I);
+hold on
+for i = 1:size(BB,1)
+    rectangle('Position',BB(i,:),'LineWidth',2,'LineStyle','-','EdgeColor','b');
+end
+
+%To detect Eyes
+EyeDetect = vision.CascadeObjectDetector('EyePairBig');
+BB=step(EyeDetect,I);
+hold on
+rectangle('Position',BB,'LineWidth',2,'LineStyle','-','EdgeColor','g');
+imshow(BB1);
