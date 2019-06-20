@@ -1,3 +1,12 @@
 http://www.ai.rug.nl/~mstollen/master_thesis_marijn_stollenga_GAE.pdf
 https://towardsdatascience.com/applied-deep-learning-part-3-autoencoders-1c083af4d798
 http://ufldl.stanford.edu/tutorial/unsupervised/Autoencoders/
+
+Sparse autoencoders Python implementation
+https://github.com/siddharth-agrawal/Sparse-Autoencoder/blob/master/sparseAutoencoder.py
+
+Andrew Ng: PCA illustration
+https://www.youtube.com/watch?v=Zbr5hyJNGCs&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN&index=81
+
+Geoffry Hinton: Autoencoders and PCA
+https://www.youtube.com/watch?v=hbU7nbVDzGE&list=PLoRl3Ht4JOcdU872GhiYWf6jwrk_SNhz9&index=69
