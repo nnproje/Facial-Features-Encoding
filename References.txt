@@ -10,3 +10,6 @@ https://www.youtube.com/watch?v=Zbr5hyJNGCs&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlR
 
 Geoffry Hinton: Autoencoders and PCA
 https://www.youtube.com/watch?v=hbU7nbVDzGE&list=PLoRl3Ht4JOcdU872GhiYWf6jwrk_SNhz9&index=69
+
+Andrew Ng: Sparse autoencoders
+http://web.stanford.edu/class/cs294a/sparseAutoencoder_2011new.pdf
