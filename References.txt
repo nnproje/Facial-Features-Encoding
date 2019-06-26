@@ -16,3 +16,10 @@ http://web.stanford.edu/class/cs294a/sparseAutoencoder_2011new.pdf
 
 Geoffry Hinton: Article about autoencoders and RBM
 http://www.cs.toronto.edu/~hinton/science.pdf
+
+Tied Weights
+https://stats.stackexchange.com/questions/239943/autoencoders-gradient-when-using-tied-weights   (Q&A)
+https://ift6266h17.files.wordpress.com/2017/03/14_autoencoders.pdf    (slide 4 menioned in the above link)
+
+contractive autoencoder
+https://www.youtube.com/watch?v=79sYlJ8Cvlc
