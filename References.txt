@@ -23,3 +23,6 @@ https://ift6266h17.files.wordpress.com/2017/03/14_autoencoders.pdf    (slide 4 m
 
 contractive autoencoder
 https://www.youtube.com/watch?v=79sYlJ8Cvlc
+
+Ali Ghodsi : RBM illustration
+https://www.youtube.com/watch?v=FJ0z3Ubagt4
