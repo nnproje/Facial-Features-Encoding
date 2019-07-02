@@ -1,0 +1,26 @@
+FilePath = 'F:\NEW_DATA\one\';
+PATH_FF = 'F:\NEW_DATA\one';
+Files = dir(PATH_FF);
+count = 1;
+batch = 20000;
+Start = [0*batch+3 1*batch+4 2*batch+5 3*batch+6 4*batch+7 5*batch+8 6*batch+9 7*batch+10];
+End   = [batch+3 2*batch+4 3*batch+5 4*batch+6 5*batch+7 6*batch+8 7*batch+9 length(Files)];
+for q=1:8
+   p=1;
+   for k=Start(q):End(q)
+       ImgName = strcat(FilePath,Files(k).name);
+       Img = imread(ImgName);
+       ImgVect = Img';
+       ImgVect = ImgVect(:);
+       AllImgs(:,p) = ImgVect;
+       p = p + 1;
+   end
+   s = strcat(strcat('F:\NEW_DATA\',num2str(q)),'.txt');
+   if(q == 8) 
+      RestImgX = AllImgs';
+      dlmwrite(s,RestImgX);
+   else
+      ALLImgX = AllImgs';
+      dlmwrite(s,ALLImgX); 
+   end
+end
