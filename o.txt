@@ -1,0 +1,64 @@
+%Read entire folder ==> convert to greyscale ==> save newImgs
+numOfPersons = 450;
+numOfImgs_Person = 8;
+GREY_FilePath = 'F:\College\DataSet\';
+for i = 1 : numOfPersons
+	GREY_Person = strcat(GREY_FilePath,num2str(i));
+	GREY_Person = strcat(GREY_Person,'\');
+	Files = dir(RGB_Person);
+	for k=3:length(Files)
+		RGB_ImgName = strcat(RGB_Person,Files(k).name);
+		RGB = imread(RGB_ImgName);
+		GREY = rgb2gray(RGB);
+		GREY_ImgName = strcat(GREY_Person,Files(k).name);
+		imwrite(uint8(GREY), GREY_ImgName);
+	end
+end
+
+
+
+
+
+%Read entire folder ==> convert to greyscale ==> save newImgs
+numOfPersons = 450;
+numOfImgs_Person = 8;
+RGB_FilePath = 'F:\College\DataSet\'; %1---450
+GREY_FilePath = 'F:\College\DataSet\';
+for i = 1 : numOfPersons
+	RGB_Person = strcat(RGB_FilePath,num2str(i));
+	RGB_Person = strcat(RGB_Person,'\');
+	GREY_Person = strcat(GREY_FilePath,num2str(i));
+	GREY_Person = strcat(GREY_Person,'\');
+	Files = dir(RGB_Person);
+	for k=3:length(Files)
+		RGB_ImgName = strcat(RGB_Person,Files(k).name);
+		RGB = imread(RGB_ImgName);
+		GREY = rgb2gray(RGB);
+		GREY_ImgName = strcat(GREY_Person,Files(k).name);
+		imwrite(uint8(GREY), GREY_ImgName);
+	end
+end
+
+
+
+numOfPersons = 450;
+numOfImgs_Person = 8;
+for q = 1 : numOfPersons
+	Person = 'F:\College\DataSet\';
+	Person = strcat(Person,num2str(q));
+	Person = strcat(Person,'\');
+	Files = dir(Person);
+	p = 1;
+	for k = 3 : numOfImgs_Person + 3
+		ImgName = strcat(FilePath,Files(k).name);
+		Img = imread(ImgName);
+		ImgVect = Img';
+		ImgVect = ImgVect(:);
+		AllImgs(:,p) = ImgVect;
+		p = p + 1;
+	end
+	dist_Path = strcat(strcat('F:\Persons\',num2str(q)));
+	s = strcat(strcat(dist_Path,'\') ,'.txt');
+	ALLImgX = AllImgs';
+	dlmwrite(s,ALLImgX); 
+end
